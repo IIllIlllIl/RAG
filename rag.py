@@ -1,6 +1,9 @@
-import getpass
 import os
 
-os.environ["LANGCHAIN_TRACING_V2"] = "true"
-os.environ["LANGCHAIN_API_KEY"] = getpass.getpass()
+
+def run_llm(prompt):
+    cmd = "ollama run llama3 " + prompt
+    os.system(cmd)
+
+
 

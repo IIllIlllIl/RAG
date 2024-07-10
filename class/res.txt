@@ -1,0 +1,23 @@
+These three Python code classes are used for URL routing and resolving in a web application.
+
+1. `ContinueResolving` class: This is an exception class that will be raised when the URL resolution process continues after 
+a match has been found. 
+
+2. `MultiRegexURLResolver` class: This class inherits from Django's built-in `urlresolvers.URLResolver`. It is used to 
+resolve multiple URLs at once. 
+
+   - The `__init__` method initializes the resolver with a list of URLs (`urls`) and exceptions (`exceptions`). 
+   
+   - The `url_patterns` property returns the list of URLs.
+   
+   - The `resolve` method tries each URL pattern on the given path, and returns the first match. If no matches are found, it 
+raises a `Resolver404` exception.
+
+3. `MultiResolverMatch` class: This class represents a multi-resolution match. It keeps track of the matched patterns, 
+exceptions, and the original path.
+
+   - The `__init__` method initializes the match with the list of matches (`matches`), exceptions (`exceptions`), matched 
+patterns (`patterns_matched`), and the original path (`path`). 
+
+   - The `func` property returns a view function that tries each match on the request. If any exception is raised during 
+this process, it will continue to try the next match until all have been tried.

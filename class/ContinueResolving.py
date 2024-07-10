@@ -1,0 +1,2 @@
+class ContinueResolving(Exception):
+    pass

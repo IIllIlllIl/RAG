@@ -1,0 +1,14 @@
+The classes in this Python code are:
+
+1. `ContinueResolving`: This is an exception class that inherits from the built-in `Exception` class.
+
+2. `MultiRegexURLResolver`: This class is a URL resolver that can handle multiple URL patterns. It has methods to resolve 
+URLs and return the matched routes.
+
+3. `multiurl`: This is a function that takes one or more URLs as arguments and returns a `MultiRegexURLResolver` instance. 
+
+4. `MultiResolverMatch`: This class represents the result of resolving a URL. It keeps track of the matches, exceptions, 
+patterns matched, path, route, and tried patterns.
+
+Note: The Django framework is being used in this code, which makes some of these classes familiar to anyone familiar with 
+Django's URL routing system.
